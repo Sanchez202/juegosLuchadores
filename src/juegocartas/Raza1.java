@@ -9,8 +9,8 @@ package juegocartas;
  * @author APRENDIZ SENA
  */
 public class Raza1 implements Magias,Skills {
-    private String nombre;
-    private int hp;
+    String nombre;
+    int hp;
     private int atk;
     private int defenza;
     private int magia;
@@ -70,51 +70,112 @@ public class Raza1 implements Magias,Skills {
         System.out.println("magia"+this.magia);
             
         
+  
+    }
+    public boolean estaVivo() {
+        return this.hp> 0;
+    }
+
+ public void Ganador () {
+        if(hp>0)
+            System.out.println("este es el ganador del combate");
+     
+    }
+    
+    public void recibirAtaque(int cantidad) {
+        
+        
+      this.hp -= cantidad;
+       if (this.hp < 0) {
+           this.hp = 0;
+        }
+    
+        System.out.println(this.nombre + " tiene " + this.hp + " puntos de vida.");
+    }
+   
+    
+    public void atacar(Raza1 oponente) {
+        System.out.println(this.nombre + " ataca a " + oponente.nombre);
+       
+        oponente.recibirAtaque(this.atk);
+        
+    
+    
+       
+    }
+    public void curar(Raza1 oponenete){
+        
+        this.hp=this.hp+15;
+        
+    }
+    public void Robarvida(Raza1 oponente) {
+        System.out.println("robando vida..");
+        this.atk=this.atk+20;
+    }
+
+    public void Ataquehielo(Raza1 oponente) {
+        System.out.println("ataque de hielo...");
+    }
+  
+    public void Ataquefuego(Raza1 oponente) {
+        System.out.println("raatacando con fuego....");
+        this.atk=this.atk+30;
+    }
+
+    
+    public void Escapar(Raza1 oponente) {
+        System.out.println("escapando...");
+        
+    }
+
+    
+    public void Dobleataque(Raza1 oponente) {
+        
+        System.out.println("doble ataque....");
+        
+        
+        // maracacacaccaca
     }
 
     @Override
     public void Curar() {
-        System.out.println("curando..");
         
-       
+        
+    }
+
+    @Override
+    public void Ataquefuego() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void Robarvida() {
-        System.out.println("robando vida..");
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void Ataquehielo() {
-        System.out.println("ataque de hielo...");
-    }
-    @Override
-    public void Ataquefuego() {
-        System.out.println("atacando con fuego....");
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void Escapar() {
-        System.out.println("escapando...");
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void Atacar() {
-        System.out.println("atacando....");
-        
-        
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
     public void Dobleataque() {
-        
-        System.out.println("doble ataque....");
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+   
+    
+    
     }
     
-     
-    
-}
     
     
-    
-

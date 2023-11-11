@@ -15,6 +15,9 @@ public interface Skills {
     public void Escapar();
     
     
+
+    
+    
     public void Atacar();
     
     
