@@ -9,8 +9,8 @@ package juegocartas;
  * @author APRENDIZ SENA
  */
 public class Raza2  implements Magias {
-    private String nombre;
-    private int hp;
+    String nombre;
+    int hp;
     private int atk;
     private int defenza;
     private int magia;
@@ -63,7 +63,18 @@ public class Raza2  implements Magias {
         this.magia = magia;
     }
     
-
+ 
+    public void lanzayespada(Raza2 oponente ){
+        oponente.hp=oponente.hp-10;
+        System.out.println(" "+oponente.nombre+" se le ha restado 10 puntos de vida");
+    }
+    public void ataque2(Raza2 oponente){
+        this.hp=this.hp+15;
+        System.out.println(""+this.nombre+" ha recuperado 15 puntos de vida ");
+                
+    }
+    
+    
     @Override
     public void Curar() {
         System.out.println("curando....");

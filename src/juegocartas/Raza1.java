@@ -72,9 +72,7 @@ public class Raza1 implements Magias,Skills {
         
   
     }
-    public boolean estaVivo() {
-        return this.hp> 0;
-    }
+    
 
  public void Ganador () {
         if(hp>0)
@@ -106,36 +104,29 @@ public class Raza1 implements Magias,Skills {
     public void curar(Raza1 oponenete){
         
         this.hp=this.hp+15;
-        
-    }
-    public void Robarvida(Raza1 oponente) {
-        System.out.println("robando vida..");
-        this.atk=this.atk+20;
+        System.out.println(" "+this.nombre+" a recuperado 15 de vida ");
     }
 
     public void Ataquehielo(Raza1 oponente) {
-        System.out.println("ataque de hielo...");
+        System.out.println("AVALANCHA DE HIELO ");
+        System.out.println(" ");
+        oponente.hp= oponente.hp-25;
+        System.out.println(" "+oponente.nombre+" se le a restado 25 puntos de vida");
+        System.out.println(" ");
     }
   
     public void Ataquefuego(Raza1 oponente) {
-        System.out.println("raatacando con fuego....");
-        this.atk=this.atk+30;
+        System.out.println("LLAMARADA INFERNAL....");
+        System.out.println(" ");
+        oponente.hp= oponente.hp-25;
+        System.out.println(" "+oponente.nombre+" se le a restado 25 puntps de vida");
+        System.out.println(" ");
     }
-
+   public void hack(Raza1 oponente){
+       this.hp=this.hp+1000;
+   }
+       //-----------------------------------------------------------------------
     
-    public void Escapar(Raza1 oponente) {
-        System.out.println("escapando...");
-        
-    }
-
-    
-    public void Dobleataque(Raza1 oponente) {
-        
-        System.out.println("doble ataque....");
-        
-        
-        // maracacacaccaca
-    }
 
     @Override
     public void Curar() {
